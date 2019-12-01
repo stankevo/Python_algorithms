@@ -50,7 +50,7 @@ class LinkedList():
                 i +=1
                 item = item.get_next()
         else: 
-            print('Value {val} not found.')
+            print(f'Value {val} not found.')
 
     def deleteItem(self, index):   # delete an item at given index
         print(f'Delete item with index {index}.')
@@ -85,7 +85,7 @@ def main():
     list.printList()
     list.deleteItem(2)
     list.printList()
-    print(list.find(30))
+    print(list.find(20))
 
 
 if __name__ == '__main__': main()

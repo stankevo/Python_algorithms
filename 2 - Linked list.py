@@ -4,9 +4,9 @@
 #print
 
 class Node:
-    def __init__(self, value = None, next = None):
+    def __init__(self, value = None):
         self._value = value
-        self._next = next
+        self._next = None
 
     def value(self, value = None):
         if value: self._value = value
@@ -19,7 +19,7 @@ class Node:
         self._next = next
 
 class LinkedList():
-    def __init__(self, head = None, length = None):
+    def __init__(self, head = None):
         self._head = head
         self._length = 0
 
@@ -33,11 +33,8 @@ class LinkedList():
 
     def insertItem(self, value):
         newNode = Node(value)
-        if (self.head() == None):
-            self.head(newNode)
-        else:
-            newNode.set_next(self.head())
-            self.head(newNode)
+        newNode.set_next(self.head())
+        self.head(newNode)
         self.length(self.length() + 1)
 
     def find(self, val): # find the first item with a given value
@@ -45,12 +42,13 @@ class LinkedList():
         i = 0
         while (item != None):
             if item.value() == val:
-                return (i, item, item.value())
+                return (i, item.value(), item)
             else: 
                 i +=1
                 item = item.get_next()
         else: 
             print(f'Value {val} not found.')
+            return None
 
     def deleteItem(self, index):   # delete an item at given index
         print(f'Delete item with index {index}.')

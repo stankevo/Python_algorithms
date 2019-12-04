@@ -1,6 +1,7 @@
 def bubbleSort(arr):
     l = len(arr)
     sorted = False
+    print('\nstart iterations:')
     while (sorted != True):
         sorted = True
         for i in range(l-1):
@@ -9,9 +10,10 @@ def bubbleSort(arr):
                 arr[i] = arr[i+1]
                 arr[i+1] = t
                 sorted = False
+        print(arr)
     return arr
 
-a = [1,3,6,3,2]
-print(a)
+a = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
+print(f'initial array:\n{a}')
 bubbleSort(a)
-print(a)
+print(f'\nsorted array:\n{a}')

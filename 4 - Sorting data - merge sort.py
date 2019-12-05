@@ -23,7 +23,10 @@ def merge_sort(arr):
         print('Done!')
     else:
         for i in range(0, len(arr), 2):
+            a1 = arr[i]
+            a2 = arr[i+1]
             print(arr[i], arr[i+1])
-
-            temp = []
+            for j in range(min(len(a1), len(a2))):
+                temp = []
+                temp.append(min(a1[j],a2[j])
             for j <= max(len(arr)

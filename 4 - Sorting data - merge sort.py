@@ -4,17 +4,11 @@ def split_array(arr):
         res[0] = arr
    else:
         l = len(arr) // 2
-        arr1 = arr[0:l]
-        arr2 = arr[l:len(arr)]
+        arr1 = arr[:l]
+        arr2 = arr[l:]
         res.append(arr1)
         res.append(arr2)
    return res
-
-# a = [1,2,3,4,5]
-# print(a)
-# q = [2]
-# q = split_array(a)
-# print(f'splitted array: {q}')
 
 def merge(a1, a2):
     res = []
@@ -59,7 +53,9 @@ def main():
     w1 = mergeSort(w)
     print(f'Sorted array: {w1}')
 
+    w = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
+    print(f'Unsorted array: {w}')
+    w1 = mergeSort(w)
+    print(f'Sorted array: {w1}')
+
 if __name__ == '__main__': main()
-
-
-

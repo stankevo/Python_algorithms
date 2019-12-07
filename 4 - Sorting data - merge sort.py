@@ -10,9 +10,11 @@ def split_array(arr):
         res.append(arr2)
    return res
 
-#a = [1,2,3,4,5]
-#print(a)
-#print(split_array(a))
+# a = [1,2,3,4,5]
+# print(a)
+# q = [2]
+# q = split_array(a)
+# print(f'splitted array: {q}')
 
 def merge(a1, a2):
     res = []
@@ -33,50 +35,31 @@ def merge(a1, a2):
             j += 1
     return res
 
+def mergeSort(arr):
+    if len(arr) == 1:
+        return arr
+    else:
+        q = [2]
+        q = split_array(arr)
+        return merge(mergeSort(q[0]), mergeSort(q[1]))
+
+def main():
+    w = [1,3,5,2,3,6,0]
+    print(f'Unsorted array: {w}')
+    w1 = mergeSort(w)
+    print(f'Sorted array: {w1}')
+
+    w = [100]
+    print(f'Unsorted array: {w}')
+    w1 = mergeSort(w)
+    print(f'Sorted array: {w1}')
+
+    w = [2,4,3,6,5,1]
+    print(f'Unsorted array: {w}')
+    w1 = mergeSort(w)
+    print(f'Sorted array: {w1}')
+
+if __name__ == '__main__': main()
 
 
 
-
-#    i = a1.pop()
-#    j = a2.pop()
-#    while (i != None and j != None):
-#        if i == None: 
-#            res.append(j)
-#            if len(a2) != 0: j = a2.pop()
-#            else: j = None
-#        elif j == None: 
-#            res.append(i)
-#            if len(a1) != 0: i = a1.pop()
-#            else: i = None
-#        elif i <= j:
-#          res.append(i)
-#          if len(a1) != 0: i = a1.pop()
-#          else: i = None
-#        else:
-#         res.append(j)
-#         if len(a2) != 0: j = a2.pop()
-#         else: j = None
-#    return res
-
-a1 = [1,3,5]
-a2 = [2,3,6,7]
-print(a1)
-print(a2)
-r = merge(a1, a2)
-print(r)
-
-
-
-
-#def merge_sort(arr):
-#    if len(arr) == 1:
-#        print('Done!')
-#   else:
-#        for i in range(0, len(arr), 2):
-#            a1 = arr[i]
-#            a2 = arr[i+1]
-#            print(arr[i], arr[i+1])
-#            for j in range(min(len(a1), len(a2))):
-#                temp = []
-#                temp.append(min(a1[j],a2[j])
-#            for j <= max(len(arr)

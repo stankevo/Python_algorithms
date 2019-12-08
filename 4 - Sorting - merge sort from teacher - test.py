@@ -3,7 +3,7 @@
 
 items = [2]
 
-def mergesort(dataset):
+def mergeSort(dataset):
     if len(dataset) > 1:
         mid = len(dataset) // 2
         leftarr = dataset[:mid]

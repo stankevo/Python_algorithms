@@ -1,7 +1,7 @@
 # Implement a merge sort with recursion
 
 
-items = [2]
+items = [6, 20, 8, 19, 56, 23, 87, 41, 49, 53]
 
 def mergeSort(dataset):
     if len(dataset) > 1:
@@ -43,5 +43,5 @@ def mergeSort(dataset):
 
 # test the merge sort with data
 print(items)
-mergesort(items)
+mergeSort(items)
 print(items)

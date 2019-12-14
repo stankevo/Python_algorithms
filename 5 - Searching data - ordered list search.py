@@ -10,18 +10,12 @@ def find(item, listItem, start = None, stop = None):
             return None
     else:
         mid = (start + stop - 1)  // 2
-        #print(f'start = {start}, stop = {stop}, mid = {mid} - {listItem[mid]}')
         if listItem[mid] == item:
-            #print(f'{mid}')
             return mid
         elif item < listItem[mid]:
-            #print(f'find({item}, listItem, {start}, {mid})')
             return find(item, listItem, start, mid)
-            #print(f'foo1, {mid}')
         else:
-            #print(f'find({item}, listItem, {mid+1}, {stop})')
             return find(item, listItem, mid+1, stop)
-            #print(f'foo2, {mid}')
 
 def find1(q):
     return q
